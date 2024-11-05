@@ -19,11 +19,13 @@ const showWinner=(userWin,userChoice,compChoice)=>{
         userScore+=1;
         myScore.innerText=userScore;
         msg.innerText=`You win! Your ${userChoice} beats ${compChoice}`;
+        msg.style.backgroundColor = "green";
     }else{
         console.log("computer won");
         compScore+=1;
         computerScore.innerText=compScore;
         msg.innerText = `You lost. ${compChoice} beats your ${userChoice}`;
+        msg.style.backgroundColor = "red";
 }}
 const playGame=(userChoice)=>{
     const compChoice=gencompChoice();
